@@ -11,6 +11,9 @@ const transporterOptions = {
     user: process.env.GMAIL_EMAIL,
     pass: process.env.GMAIL_PASSWORD,
   },
+  tls: {
+    rejectUnauthorized: false // sometimes your antivirus interferes and 
+  }
 };
 
 const transporter = nodemailer.createTransport(transporterOptions);
